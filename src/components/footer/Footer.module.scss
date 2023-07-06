@@ -1,0 +1,105 @@
+.footer {
+  background-image: url('/static/media/footer_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 26px 0;
+
+  .footer__wrapper {
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 auto;
+
+    .footer__box {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .footer__box_top {
+        display: flex;
+        gap: 20px;
+
+        ul {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+
+          li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .footer__box__top_icon,
+            button {
+              display: flex;
+              border-radius: 50%;
+              background-color: white;
+              padding: 10px;
+            }
+
+            p {
+              font-size: 14px;
+            }
+
+            a {
+              color: black;
+            }
+
+            button {
+              border-radius: 25px;
+              background-color: dodgerblue;
+              color: white;
+            }
+          }
+        }
+      }
+
+      .footer__box_bottom {
+        display: flex;
+        gap: 20px;
+      }
+    }
+
+    .footer__lists {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+
+      ul {
+        height: fit-content;
+        display: grid;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .footer .footer__wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer .footer__box {
+    .footer__box_top,
+    .footer__box_bottom {
+      flex-direction: column;
+      align-items: center;
+
+      ul {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  }
+
+  .footer .footer__lists {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
